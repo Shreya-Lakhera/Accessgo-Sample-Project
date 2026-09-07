@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AccessGo Transport</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+      <h1>AccessGo Transport</h1>
+      <p>Safe, affordable, and accessible rides for people with disabilities.</p>
+      <button id="contrast-toggle" aria-pressed="false">Enable high contrast</button>
+    </header>
+    <main id="main-content">
+      <section aria-labelledby="features-title">
+        <h2 id="features-title">Why choose AccessGo?</h2>
+        <ul>
+          <li>Wheelchair-accessible vehicles</li>
+          <li>Service animal friendly rides</li>
+          <li>Trained and verified drivers</li>
+          <li>Live trip tracking for caregivers</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="booking-title">
+        <h2 id="booking-title">Book a ride</h2>
+        <form id="booking-form">
+          <label for="pickup">Pickup location</label>
+          <input id="pickup" name="pickup" type="text" required />
+
+          <label for="dropoff">Drop-off location</label>
+          <input id="dropoff" name="dropoff" type="text" required />
+
+          <label for="need">Accessibility support needed</label>
+          <select id="need" name="need">
+            <option value="wheelchair">Wheelchair ramp</option>
+            <option value="audio">Audio assistance</option>
+            <option value="visual">Visual assistance</option>
+            <option value="service-animal">Service animal support</option>
+          </select>
+
+          <button type="submit">Confirm booking request</button>
+        </form>
+        <p id="booking-status" role="status" aria-live="polite"></p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
